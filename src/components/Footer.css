@@ -1,0 +1,24 @@
+.footer {
+  text-align: center;
+  padding: 32px 16px;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  color: var(--navy);
+}
+
+.footer h2 {
+  font-size: 32px;
+}
+
+.footer p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+  font-size: 28px;
+}

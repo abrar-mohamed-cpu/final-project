@@ -1,0 +1,62 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 8px 24px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-logo {
+  height: 70px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;
+  font-size: 20px;
+}
+
+.navbar-links a {
+  color: var(--navy);
+}
+
+.navbar-links a.active {
+  font-weight: 600;
+  border-bottom: 2px solid var(--navy);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.login-btn {
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 9px;
+}

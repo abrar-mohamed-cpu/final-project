@@ -1,17 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
+import { CartProvider } from "react-use-cart";
+import App from "./App";
+import { AllData } from "./Data/AllData";
+import Home from "./pages/Home";
+import Medicines from "./pages/Medicines";
+import Categories from "./pages/Categories";
+import CategoryPage from "./pages/CategoryPage";
+import Cart from "./pages/Cart";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "medicines", element: <Medicines /> },
+      { path: "categories", element: <Categories /> },
+      { path: "categories/:slug", element: <CategoryPage /> },
+      { path: "contact", element: <div>Contact</div> },
+      { path: "cart", element: <Cart /> },
+      { path: "login", element: <div>Login</div> },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <AllData>
+    <CartProvider>
+      <ScrollToTop />
+      <RouterProvider router={router} />
+    </CartProvider>
+  </AllData>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
