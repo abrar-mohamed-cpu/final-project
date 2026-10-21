@@ -9,6 +9,7 @@ import Medicines from "./pages/Medicines";
 import Categories from "./pages/Categories";
 import CategoryPage from "./pages/CategoryPage";
 import Cart from "./pages/Cart";
+import Address from "./pages/Address";
 import "./index.css";
 import "./responsive.css";
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: "categories/:slug", element: <CategoryPage /> },
       { path: "contact", element: <div>Contact</div> },
       { path: "cart", element: <Cart /> },
+      { path: "address", element: <Address /> },
       { path: "login", element: <div>Login</div> },
     ],
   },

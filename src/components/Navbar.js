@@ -29,7 +29,7 @@ function Navbar() {
       </nav>
 
       <div className="navbar-actions">
-        <Link to="/search" aria-label="Search">
+        <Link to="/medicines" aria-label="Search">
           <FiSearch size={26} />
         </Link>
         <Link to="/cart" aria-label="Cart" className="cart-link">
