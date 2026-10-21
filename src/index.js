@@ -10,6 +10,7 @@ import Categories from "./pages/Categories";
 import CategoryPage from "./pages/CategoryPage";
 import Cart from "./pages/Cart";
 import "./index.css";
+import "./responsive.css";
 
 const router = createBrowserRouter([
   {
